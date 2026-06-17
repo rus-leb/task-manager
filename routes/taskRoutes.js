@@ -1,5 +1,5 @@
 import express from 'express';
-import * as taskController from '../controllers/taskController.js';
+import * as taskController from '../controllers/taskControllers.js';
 import checkAuth from '../middlewares/checkAuth.js';
 import checkAdmin from '../middlewares/checkAdmin.js';
 
