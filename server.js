@@ -1,3 +1,12 @@
-const sun = (a, b) => a + b;
+const express = require('express');
+const bodyParser = require('body-parser');
 
-console.log(sun(10, 5));
+const app = express();
+const port = 3000
+
+// midleware
+app.use(bodyParser.json());
+
+app.listen(port, () => {
+    console.log("Server listening on part ${port} and starting at http://localhost:3000");
+})
