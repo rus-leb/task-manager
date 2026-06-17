@@ -1,14 +1,21 @@
-const express = require('express');
-const bodyParser = require('body-parser');
+import express from 'express';
+import bodyParser from 'body-parser';
+import './config/db.js';
+import authRoutes from './routes/authRoutes.js';
+import taskRoutes from './routes/taskRoutes.js';
+import swaggerRoutes from './config/swagger.js';
 
 const app = express();
 const port = 3000;
 
-// midleware
+
 app.use(bodyParser.json());
 
+app.use(swaggerRoutes);
+app.use('/api', authRoutes);
+app.use('/api', taskRoutes);
+
 app.listen(port, () => {
-    console.log(
-        'Server listening on part ${port} and starting at http://localhost:3000'
-    );
+console.log(`Server listening on port ${port}`);
+console.log(`Swagger documentation available at http://localhost:${port}/docs`);
 });
