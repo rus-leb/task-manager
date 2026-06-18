@@ -15,3 +15,7 @@ get: { tags: ['Task'], summary: 'Get tasks' }
 }
 }
 };
+
+router.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+
+export default router;
