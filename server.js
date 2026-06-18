@@ -14,7 +14,6 @@ app.use(bodyParser.json());
 app.use(swaggerRoutes);
 app.use('/api', authRoutes);
 app.use('/api', taskRoutes);
-
 app.get('/', (req, res) => {
   res.status(200).json({
     status: "success",
