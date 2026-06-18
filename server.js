@@ -15,6 +15,13 @@ app.use(swaggerRoutes);
 app.use('/api', authRoutes);
 app.use('/api', taskRoutes);
 
+app.get('/', (req, res) => {
+  res.status(200).json({
+    status: "success",
+    message: "Task Manager API работает успешно!"
+  });
+});
+
 app.listen(port, () => {
 console.log(`Server listening on port ${port}`);
 console.log(`Swagger documentation available at http://localhost:${port}/docs`);
