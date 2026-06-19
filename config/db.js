@@ -13,7 +13,7 @@ import { fileURLToPath } from 'url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 dotenv.config({ path: path.resolve(__dirname, '../.env') });
 
-const dbUri = "mongodb+srv://robberyteam7_db_user:test111@cluster0.a1uplna.mongodb.net/?appName=Cluster0"
+const dbUri = process.env.MONGO_URI;
 
 mongoose
 .connect(dbUri)

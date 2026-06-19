@@ -8,6 +8,7 @@ import swaggerRoutes from './config/swagger.js';
 const app = express();
 const port = 3000;
 
+app.use(express.static('publick'))
 
 app.use(bodyParser.json());
 
