@@ -6,7 +6,8 @@
     "type": "module",
     "scripts": {
         "dev": "npx nodemon server.js",
-        "build": "npm install",
+        "install": "npm install",
+        "build": "npm run build",
         "test": "echo \"Error: no test specified\" && exit 1",
         "format:check": "prettier --check .",
         "format:write": "prettier --write .",
